@@ -1,0 +1,23 @@
+.video{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /*adjusting the opacity of the video*/
+    color: white;/*white text colour*/
+    margin-bottom: 100px;
+    position: relative;
+    overflow: hidden; /*the video will stay inside of our container with any overflow hidden*/
+    min-height: 80vh;
+}
+
+.background{
+    position: absolute;
+    z-index: -1;
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+
+}

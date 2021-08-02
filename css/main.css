@@ -1,5 +1,5 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
+   
     /*In case a user does not have access to the fonts I import it will default to these*/
     margin: 0px;
     /* resetting the default values that the browser may have for margin, padding and border*/
@@ -8,6 +8,7 @@
 }
 
 body {
+    font-family: 'Raleway', sans-serif; 
     background-attachment: fixed;
     width: 100%;
     height: 100%; 
@@ -23,6 +24,7 @@ body {
 
 a {
     text-decoration: none;
+    
     /*Selecting all of our links and taking away the underline that each link has by default*/
 }
 
@@ -61,6 +63,11 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Raleway', sans-serif; 
+}
+
+.header{
+    background: radial-gradient(#fff,#ffd6d6);
 }
 
 .mobileNavBTN {
@@ -110,11 +117,24 @@ header {
 
 
 #tagline {
-    font-family: 'Caveat Brush', sans-serif;
-    font-size: 70px;
-    font-style: italic;
+    font-family: 'Raleway', sans-serif;
+    font-size: 55px;
     text-align: center;
-    margin: 30px 0px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    color: #555;
+}
+
+#tagline::after {
+    content: '';
+    background: #d49697;
+    width: 315px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -338px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #section1 {
@@ -124,8 +144,16 @@ header {
     flex-direction: row;
 }
 
+#section1 img{
+    box-shadow: 0px 0px 30px 20px rgba(0,0,0,0.5);
+    margin-left: 40px;
+}
+
 #section1 > p {
 padding-left: 20px;
+padding-right: 20px;
+padding-top: 70px;
+font-size: 18px;
 }
 
 #section2 {
@@ -136,8 +164,17 @@ padding-left: 20px;
     padding-top: 80px;
 }
 
+#section2 img{
+    box-shadow: 0px 0px 30px 20px rgba(0,0,0,0.5);
+    margin-right: 40px;
+}
+
 #section2 > p {
+    font-family: 'Raleway', sans-serif;
+    padding-left: 20px;
     padding-right: 20px;
+    padding-top: 110px;
+    font-size: 18px;
 }
 
 /*Image slider css starts here*/
@@ -206,6 +243,52 @@ footer>span {
     font-size: 22px;
 }
 
+
+/*advertisement styling here*/
+
+.offer{ /*adding a gradient background to this small container so that the advert is different from the rest of the page*/
+    background: radial-gradient(#fff, #ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;
+    }
+    
+    .col-2 .advert-img{
+        padding: 50px;
+    }
+    
+    small{
+        color: grey;
+            font-family: 'Raleway', sans-serif;
+    }
+    
+    .offer h1{
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    .offer p{
+        font-family: 'Raleway', sans-serif;
+    }
+    
+/*go to the top of the page button*/
+
+html{
+    scroll-behavior: smooth; /* for a smooth scroll rather than the page just jumping back to the top*/
+  }
+.go-top-btn{
+    position: fixed; /*keep a fixed position on the page while the user scrolls so its always visible*/
+    width: 50px;
+    height: 50px;
+    background: #d39495; /*colour of the square holding the arrow*/
+    bottom: 40px;
+    right: 50px;
+  
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white; /*colour of the arrow*/
+    font-size: 22px;
+  }
+  
 
 
 /* Media query for 900px and below */
