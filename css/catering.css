@@ -1,3 +1,23 @@
+
+
+
+.btn { /*restyling some of my button elements for this page, particularly the menu*/
+    display: inline-block;
+    background: #d49697;
+    color: #fff;
+    padding: 18px 30px;
+    margin: 5px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+    font-size: 18px;
+    width: 225px;
+    line-height: 0px;
+    cursor: pointer;
+}
+
+
+/*Video background starts here*/
+
 .video{
 
     display: flex;
@@ -6,7 +26,7 @@
     text-align: center;
     background: rgba(0, 0, 0, 0.6); /*adjusting the opacity of the video*/
     color: white;/*white text colour*/
-    margin-bottom: 100px;
+    margin-bottom: 45px;
     position: relative;
     overflow: hidden; /*the video will stay inside of our container with any overflow hidden*/
     min-height: 80vh;
@@ -15,9 +35,149 @@
 .background{
     position: absolute;
     z-index: -1;
-    top: 0; 
-    left: 0; 
+    top: 50%; /*These 2 values at 50% put the top left corner of the video dead center of the container*/
+    left: 50%;
+    transform: translate(-50%, -50%); /*Dependant on screen size, the video will transform -50% on both the x and y axis so that 
+    our video is always playing from the center, rather than half of the video being cut out*/
     min-width: 100%;
     min-height: 100%;
 
 }
+
+
+/*Testimomnials start here*/
+
+.testimonial{
+    padding-top: 0px;
+    margin-bottom: 45px;
+    background: radial-gradient(#fff, #ffd6d6);
+}
+
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 10px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3); /*adding a box shadow so that the reviews stand out*/
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.testimonial .col-3 img{ /*making the testimonial photos a small circular image*/
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+
+.fa.fa-quote-left{ /*styling the quote symbol above the testimonials*/
+    font-size: 30px;
+    color:#b88081;
+}
+
+.col-3 p{ /*adjusting and styling the testimonials text*/
+    font-size: 14px;
+    margin: 12px 0;
+    color: grey;
+}
+
+.testimonial .col-3 h3{ /* styling the name of the testimonial person*/
+    font-weight: 600;
+    color: grey;
+    font-size: 16px;
+}
+
+/*reviews title styling*/
+.title {
+    text-align: center;
+    margin: 0 auto 48px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+    font-size: 28px;
+
+}
+
+
+
+
+/*styling for menu starts here*/
+
+.food-menu{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*3 items in a row, 1fr means the column will take up 1 fraction unit
+    of the available space*/
+    padding: 30px 20px; /*padding in between each food item*/
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    margin: 0 20px;
+    transition: 0.2s ease;
+}
+.food-items img{
+   height: 300px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+
+    
+}
+
+.food-items:hover{
+    transform: scale(1.04);
+}
+
+.details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+.sub-details{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.sub-details>h5{
+    font-weight: 600;
+    font-size: 18px;
+}
+.price{
+    text-align: right;
+}
+.details>p{
+    color: #6f6f6f;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+}
+
+
+
+/*media query here to make this page responsive*/
+
+@media screen and (max-width: 1000px){
+
+.food-menu{
+    grid-template-columns: repeat(2, 1fr); /*only show 2 items in a row for our menu if the screen size is less than 1000px*/
+}
+
+}
+
+
+@media screen and (max-width: 600px){
+
+    .food-menu{
+        grid-template-columns: repeat(1, 1fr); /*only show 1 item in a row for our menu if the screen size is less than 600px*/
+    }
+    
+    }
