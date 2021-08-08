@@ -18,12 +18,18 @@
     cursor: pointer;
 }
 
+
+.btn:hover{
+    background: #6b6869; /*adding a hover effect on the button and above is the transition time so that it is a smooth animation*/
+}
+
 .mobileNavBTN {
     font-size: 35px;
     padding: 5px;
     margin-left: 67px;
     background: transparent;
 }
+
 
 .container-c{
     max-width: 1300px;

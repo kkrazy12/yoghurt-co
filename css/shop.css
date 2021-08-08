@@ -157,6 +157,10 @@ body{
 
 /*Customer favourites*/
 
+.row-favourites{
+display: flex;
+flex-basis: 25%;
+}
 
 .col-4{
     flex-basis: 25%; /*Each column uses 25% as we have four columns*/
@@ -288,6 +292,16 @@ small{
 }
 
 
+@media only screen and (max-width: 900px){
+    .row-favourites{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        }
+}
 
 
 @media only screen and (max-width: 600px){
@@ -296,6 +310,7 @@ small{
         text-align: center;
         flex-direction: column; 
     }
+
 
     .col-2, .col-3, .col-4{
         flex-basis: 100%;
@@ -328,6 +343,10 @@ small{
     }
 
     .row img{
+        width: 400px;
+    }
+
+    .col-4 img {
         width: 400px;
     }
 
