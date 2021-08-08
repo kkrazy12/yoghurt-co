@@ -9,7 +9,7 @@ body{
     font-family: 'Raleway', sans-serif; 
 }
 
-.container{
+.container-s{
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
@@ -24,7 +24,7 @@ body{
 .row{
     display: flex;
     align-items: center;
-    flex-wrap: unset;
+    flex-wrap: wrap;
     justify-content: space-around;
     flex-basis: 25%;
     text-align: center;
@@ -55,9 +55,42 @@ body{
 
 .mobileNavBTN {
     font-size: 35px;
+    /* Making the nav button bigger and positioning it */
     padding: 5px;
     margin-left: 67px;
     background: transparent;
+}
+
+.btn{
+    display: inline-block;
+    background: #d49697;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #6b6869; /*adding a hover effect on the button and above is the transition time so that it is a smooth animation*/
+}
+
+
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+}
+
+.menu>li {
+    padding: 10px 20px;
+}
+
+.hide {
+    display: none;
 }
 
 .btn{
@@ -106,7 +139,7 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
-.small-container{ /*Categories are in a small container so that I can make them smaller and space them nicely*/
+.small-container-s{ /*Categories are in a small container so that I can make them smaller and space them nicely*/
     max-width: 1080px;
     margin: auto;
     padding-top: 55px;
@@ -122,7 +155,7 @@ body{
 
 
 
-/*Latest purchases from customers*/
+/*Customer favourites*/
 
 
 .col-4{
@@ -146,7 +179,7 @@ body{
     margin: 0 auto 80px;
     position: relative;
     line-height: 60px;
-    color: #555;
+    color: grey;
     font-size: 28px;
     font-family: 'Raleway', sans-serif;
 }
@@ -303,9 +336,9 @@ small{
         margin-right: 160px;
     }
 
-.container{
-    width: auto;
-}
+    .container-s{
+        width: auto;
+    }
 
 .testimonial{
     padding-top: 20px;

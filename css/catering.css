@@ -1,3 +1,6 @@
+.header-c{
+    background:#ffd6d6; /*adding this gradient bg colour for the first section of the shop page*/
+}
 
 
 
@@ -14,6 +17,21 @@
     line-height: 0px;
     cursor: pointer;
 }
+
+.mobileNavBTN {
+    font-size: 35px;
+    padding: 5px;
+    margin-left: 67px;
+    background: transparent;
+}
+
+.container-c{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 
 
 /*Video background starts here*/
@@ -47,13 +65,13 @@
 
 /*Testimomnials start here*/
 
-.testimonial{
+.testimonial-c{
     padding-top: 0px;
     margin-bottom: 45px;
     background: radial-gradient(#fff, #ffd6d6);
 }
 
-.testimonial .col-3{
+.testimonial-c .col-3{
     text-align: center;
     padding: 40px 10px;
     background-color: #fff;
@@ -62,13 +80,13 @@
     transition: transform 0.5s;
 }
 
-.testimonial .col-3 img{ /*making the testimonial photos a small circular image*/
+.testimonial-c .col-3 img{ /*making the testimonial photos a small circular image*/
     width: 50px;
     margin-top: 20px;
     border-radius: 50%;
 }
 
-.testimonial .col-3:hover{
+.testimonial-c .col-3:hover{
     transform: translateY(-10px);
 }
 
@@ -83,14 +101,23 @@
     color: grey;
 }
 
-.testimonial .col-3 h3{ /* styling the name of the testimonial person*/
+.testimonial-c .col-3 h3{ /* styling the name of the testimonial person*/
     font-weight: 600;
     color: grey;
     font-size: 16px;
 }
 
+.small-container-c {
+    max-width: 1080px;
+    margin: auto;
+    padding-top: 55px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+
 /*reviews title styling*/
-.title {
+.title-c {
     text-align: center;
     margin: 0 auto 48px;
     position: relative;
@@ -98,6 +125,18 @@
     color: #555;
     font-size: 28px;
 
+}
+
+.title-c::after{ /*this is styling for the small line underneath the title*/
+    content: '';
+    background: #d49697;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /*line will sit on the center from the x axis*/
 }
 
 
@@ -179,5 +218,19 @@
     .food-menu{
         grid-template-columns: repeat(1, 1fr); /*only show 1 item in a row for our menu if the screen size is less than 600px*/
     }
+
+    .menu {
+        display: block;
+        /*this will stack our menu elements on top of each other*/
+        position: absolute;
+        z-index: 100; /*so that the menu appears in front of my image slider*/
+        top: 90px;
+
+    }
+
+    .hide {
+        display: none;
+    }
     
+
     }
