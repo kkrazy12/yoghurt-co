@@ -4,7 +4,7 @@
 
 
 
-.btn { /*restyling some of my button elements for this page, particularly the menu*/
+.btn-c { /*restyling some of my button elements for this page, particularly the menu*/
     display: inline-block;
     background: #d49697;
     color: #fff;
@@ -19,7 +19,7 @@
 }
 
 
-.btn:hover{
+.btn-c:hover{
     background: #6b6869; /*adding a hover effect on the button and above is the transition time so that it is a smooth animation*/
 }
 

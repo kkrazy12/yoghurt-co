@@ -118,23 +118,13 @@ header {
 
 #tagline {
     font-family: 'Raleway', sans-serif;
+    text-decoration: underline solid #d39495;
     font-size: 55px;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 70px;
     color: #555;
-}
 
-#tagline::after {
-    content: '';
-    background: #d49697;
-    width: 315px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: -338px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 #section1 {

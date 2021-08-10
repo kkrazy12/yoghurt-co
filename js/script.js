@@ -27,3 +27,6 @@ window.addEventListener('resize', () => {
 
     }
 })
+
+//code for the fact cards on the vegan lifestyle page starts here//
+
