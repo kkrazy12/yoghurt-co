@@ -1,5 +1,5 @@
 * {
-   
+
     /*In case a user does not have access to the fonts I import it will default to these*/
     margin: 0px;
     /* resetting the default values that the browser may have for margin, padding and border*/
@@ -8,15 +8,15 @@
 }
 
 body {
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Raleway', sans-serif;
     background-attachment: fixed;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     background: none;
 
 }
 
-.logo{
+.logo {
     font-size: 35px;
     color: black;
     margin-left: 10px;
@@ -24,7 +24,7 @@ body {
 
 a {
     text-decoration: none;
-    
+
     /*Selecting all of our links and taking away the underline that each link has by default*/
 }
 
@@ -63,11 +63,11 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Raleway', sans-serif;
 }
 
-.header{
-    background: radial-gradient(#fff,#ffd6d6);
+.header {
+    background: radial-gradient(#fff, #ffd6d6);
 }
 
 .mobileNavBTN {
@@ -119,7 +119,7 @@ header {
 #tagline {
     font-family: 'Raleway', sans-serif;
     text-decoration: underline solid #d39495;
-    font-size: 55px;
+    font-size: 45px;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 70px;
@@ -134,16 +134,16 @@ header {
     flex-direction: row;
 }
 
-#section1 img{
-    box-shadow: 0px 0px 30px 20px rgba(0,0,0,0.5);
+#section1 img {
+    box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.5);
     margin-left: 40px;
 }
 
-#section1 > p {
-padding-top: 20px;
-padding-left: 20px;
-padding-right: 20px;
-font-size: 18px;
+#section1>p {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
 }
 
 #section2 {
@@ -154,12 +154,12 @@ font-size: 18px;
     padding-top: 80px;
 }
 
-#section2 img{
-    box-shadow: 0px 0px 30px 20px rgba(0,0,0,0.5);
+#section2 img {
+    box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.5);
     margin-right: 40px;
 }
 
-#section2 > p {
+#section2>p {
     padding-top: 70px;
     padding-left: 20px;
     padding-right: 20px;
@@ -168,48 +168,60 @@ font-size: 18px;
 
 /*Image slider css starts here*/
 #slider {
-	overflow: hidden; 
+    overflow: hidden;
 }
+
 #slider figure {
-	position: relative; 
-	width: 500%;
-	margin: 0;
-	left: 0;
-	animation: 20s slider infinite; /*It will take 20s for the slider to slide through all of the images but it is an infinite loop*/
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+    /*It will take 20s for the slider to slide through all of the images but it is an infinite loop*/
 }
+
 #slider figure img {
-	width: 20%; /* 100% divided by 5 images = 20% so we only see one image at a time without the overlap*/
-	float: left;
+    width: 20%;
+    /* 100% divided by 5 images = 20% so we only see one image at a time without the overlap*/
+    float: left;
 }
 
 @keyframes slider {
-	0% {
-		left: 0;
-	}
-	20% {
-		left: 0;
-	}
-	25% {
-		left: -100%;
-	}
-	45% {
-		left: -100%;
-	}
-	50% {
-		left: -200%;
-	}
-	70% {
-		left: -200%;
-	}
-	75% {
-		left: -300%;
-	}
-	95% {
-		left: -300%;
-	}
-	100% {
-		left: -400%;
-	}
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
 }
 
 footer {
@@ -233,51 +245,58 @@ footer>span {
 }
 
 
-/*advertisement styling here*/
-
-.offer{ /*adding a gradient background to this small container so that the advert is different from the rest of the page*/
+/*Advertisement styling starts here*/
+.offer {
+    /*adding a gradient background to this small container so that the advert is different from the rest of the page*/
     background: radial-gradient(#fff, #ffd6d6);
     margin-top: 80px;
     padding: 30px 0;
-    }
-    
-    .col-2 .advert-img{
-        padding: 50px;
-    }
-    
-    small{
-        color: grey;
-            font-family: 'Raleway', sans-serif;
-    }
-    
-    .offer h1{
-        font-family: 'Raleway', sans-serif;
-    }
-    
-    .offer p{
-        font-family: 'Raleway', sans-serif;
-    }
-    
+}
+
+.col-2 .recycle-img {
+    width: 400px;
+
+}
+
+
+small {
+    color: grey;
+}
+
+.offer .col-2>h1 {
+
+    font-size: 35px;
+    line-height: 30px;
+    margin: 18px 0;
+}
+
+
+
 /*go to the top of the page button*/
 
-html{
-    scroll-behavior: smooth; /* for a smooth scroll rather than the page just jumping back to the top*/
-  }
-.go-top-btn{
-    position: fixed; /*keep a fixed position on the page while the user scrolls so its always visible*/
+html {
+    scroll-behavior: smooth;
+    /* for a smooth scroll rather than the page just jumping back to the top*/
+}
+
+.go-top-btn {
+    position: fixed;
+    /*keep a fixed position on the page while the user scrolls so its always visible*/
     width: 50px;
     height: 50px;
-    background: #d39495; /*colour of the square holding the arrow*/
+    background: #d39495;
+    /*colour of the square holding the arrow*/
     bottom: 40px;
     right: 50px;
-  
+
     text-decoration: none;
     text-align: center;
     line-height: 50px;
-    color: white; /*colour of the arrow*/
+    color: white;
+    /*colour of the arrow*/
     font-size: 22px;
-  }
-  
+}
+
 
 
 /* Media query for 900px and below */
@@ -296,14 +315,14 @@ html{
         /*stacks the images and text rather than displaying them in a row*/
     }
 
-    #section1{
+    #section1 {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
     }
 
-    #section1 > p {
+    #section1>p {
         padding-top: 30px;
         padding-left: 20px;
         padding-right: 20px;
@@ -311,14 +330,14 @@ html{
         text-align: center;
     }
 
-    #section2{
+    #section2 {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
     }
 
-    #section2 > p {
+    #section2>p {
         padding-top: 30px;
         padding-left: 20px;
         padding-right: 20px;
@@ -356,7 +375,7 @@ html{
         font-size: 20px;
     }
 
-    #tagline{
+    #tagline {
         margin-bottom: 20px;
         font-size: 55px;
     }
@@ -365,14 +384,14 @@ html{
         flex-direction: column-reverse;
     }
 
-    #section1{
+    #section1 {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column-reverse;
     }
 
-    #section1 > p {
+    #section1>p {
         padding-bottom: 30px;
         padding-left: 20px;
         padding-right: 20px;
@@ -380,7 +399,7 @@ html{
         text-align: center;
     }
 
-    #section2{
+    #section2 {
         width: 100%;
         height: auto;
         display: flex;
@@ -388,7 +407,7 @@ html{
         padding-top: 20px;
     }
 
-    #section2 > p {
+    #section2>p {
         padding-bottom: 30px;
         padding-left: 20px;
         padding-right: 20px;
@@ -424,11 +443,12 @@ html{
         display: block;
         /*this will stack our menu elements on top of each other*/
         position: absolute;
-        z-index: 100; /*so that the menu appears in front of my image slider*/
+        z-index: 100;
+        /*so that the menu appears in front of my image slider*/
         top: 90px;
         left: 0;
         width: 100%;
-        
+
         background-color: rgba(255, 255, 255, 0.9);
         /* alpha takes care of the opacity which is 0.9 so there is some differentiation
         between the menu and the web page.*/

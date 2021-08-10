@@ -1,0 +1,190 @@
+.header-v {
+  background: #ffd6d6;
+  /*adding this gradient bg colour for the first section of the shop page*/
+}
+
+.container-v {
+  /*container for my header and nav section*/
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+/*nav menu styling*/
+.mobileNavBTN {
+  font-size: 35px;
+  padding: 5px;
+  margin-left: 67px;
+  background: transparent;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+}
+
+.hide {
+  display: none;
+}
+
+/*About the vegan lifestyle title styling*/
+.title-v {
+  text-decoration: underline solid #d39495;
+  text-align: center;
+  margin: 40px 0px;
+  /*applying 40px of margin to the top and bottom of our title but adding no padding for the left and right*/
+  position: relative;
+  line-height: 50px;
+  color: grey;
+  font-size: 40px;
+
+}
+
+
+/*Vegan fact cards start here*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /*auto-fit will fit as many columns on to the users screen depending on screen size
+  I have just given a minimum screen size to make the grid responsive - the minimum is 400px. 1fr means we will only show 1 fractional unit dependant on the space.
+  I could instead put this code into our media query but this makes more sense to me*/
+  padding: 20px;
+  grid-gap: 40px;
+  transition: transform 0.5s;
+}
+
+.fact-cards {
+  transition: transform 0.5s;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 40px;
+
+}
+
+.fact-cards:hover {
+  transform: translateY(-10px); /*the hover animation for my fact cards*/
+
+}
+
+.card1 {
+  background-color: grey; /*background colour of the card*/
+  border-radius: 20px; /*Rounding off the cards edges*/
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5); /*adding a box shadow so the cards stand out*/
+}
+
+.card2 {
+  background-color: lightpink;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card3 {
+  background-color: grey;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card4 {
+  background-color: lightpink;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  /*I added clip path to the containers holding our cards for this cool diagonal overlay. I'm using a polygon so that I have 
+  four points to work with and cover the image.*/
+}
+
+.card-img {
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+details {
+  padding: 20px 20px;
+}
+
+.details>h3 {
+  color: white; /*the grey cards have a white header so its readable*/
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+
+.details>.black {
+  color: black; /*the pink cards have black text*/
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+
+.details>.info {
+  color: white; /*the grey cards have white text for the info*/
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.details>.info2 {
+  color: black; /*the pink cards have a black header*/
+}
+
+
+/*Advertisement styling starts here*/
+.offer-v {
+  /*adding a gradient background to this small container so that the advert is different from the rest of the page*/
+  background: radial-gradient(#fff, #ffd6d6);
+  margin-top: 80px;
+  padding: 30px 0;
+}
+
+
+small {
+  color: grey;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+.offer-v .col-2>h1 {
+  font-size: 50px;
+}
+
+
+.offer-v .col-2>p {
+  font-size: 16px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+  .menu {
+    display: block;
+    /*this will stack our menu elements on top of each other*/
+    position: absolute;
+    z-index: 100;
+    /*so that the menu appears in front of my image slider*/
+    top: 90px;
+
+  }
+
+  .menu>li {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 50px 0px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+
+}

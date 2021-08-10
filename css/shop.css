@@ -153,6 +153,32 @@ body{
 }
 
 
+/* I originally wanted to code the underline like the below but I struggled with the psuedo command
+and making the line responsive. 
+
+.title::after{ /*this is styling for the small line underneath the title
+    content: '';
+    background: #d49697;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /*line will sit on the center from the x axis
+}*/
+
+.title{ 
+    text-align: center; /*aligning the categories title in the center and styling*/
+    text-decoration: underline solid #d39495;
+    text-decoration-thickness: 4px;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: grey;
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+}
 
 
 /*Customer favourites*/
@@ -178,27 +204,6 @@ flex-basis: 25%;
     font-family: 'Raleway', sans-serif;
 }
 
-.title{ 
-    text-align: center; /*aligning the categories title in the center and styling*/
-    margin: 0 auto 80px;
-    position: relative;
-    line-height: 60px;
-    color: grey;
-    font-size: 28px;
-    font-family: 'Raleway', sans-serif;
-}
-
-.title::after{ /*this is styling for the small line underneath the title*/
-    content: '';
-    background: #d49697;
-    width: 80px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); /*line will sit on the center from the x axis*/
-}
 
 h4{
     color: black;
@@ -230,7 +235,7 @@ margin-top: 80px;
 padding: 30px 0;
 }
 
-.col-2 .advert-img{
+.col-2 .wedding-img{
    padding:0px;
 }
 

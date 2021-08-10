@@ -124,16 +124,21 @@
 
 /*reviews title styling*/
 .title-c {
+    text-decoration: underline solid #d39495;
+    text-decoration-thickness: 4px;
     text-align: center;
     margin: 0 auto 48px;
     position: relative;
     line-height: 60px;
     color: #555;
-    font-size: 28px;
+    font-size: 35px;
 
 }
 
-.title-c::after{ /*this is styling for the small line underneath the title*/
+/* I originally wanted to code the underline like the below but I struggled with the psuedo command
+and making the line responsive. 
+
+.title-c::after{ /*this is styling for the small line underneath the title
     content: '';
     background: #d49697;
     width: 80px;
@@ -142,8 +147,8 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%); /*line will sit on the center from the x axis*/
-}
+    transform: translateX(-50%); /*line will sit on the center from the x axis
+}*/
 
 
 
