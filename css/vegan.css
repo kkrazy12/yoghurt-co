@@ -20,12 +20,16 @@
   background: transparent;
 }
 
-.menu {
+.menu-v {
   list-style: none;
   display: flex;
   flex-direction: row;
   text-align: center;
 
+}
+
+.menu-v>li {
+  padding: 10px 20px;
 }
 
 .hide {
@@ -51,7 +55,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   /*auto-fit will fit as many columns on to the users screen depending on screen size
-  I have just given a minimum screen size to make the grid responsive - the minimum is 400px. 1fr means we will only show 1 fractional unit dependant on the space.
+  I have just given a minimum screen size to make the grid responsive - the minimum is 400px. 
+  1fr means the page will only show 1 fractional unit dependant on the space.
   I could instead put this code into our media query but this makes more sense to me*/
   padding: 20px;
   grid-gap: 40px;
@@ -67,18 +72,23 @@
 }
 
 .fact-cards:hover {
-  transform: translateY(-10px); /*the hover animation for my fact cards*/
+  transform: translateY(-10px);
+  /*the hover animation for my fact cards*/
 
 }
 
 .card1 {
-  background-color: grey; /*background colour of the card*/
-  border-radius: 20px; /*Rounding off the cards edges*/
-  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5); /*adding a box shadow so the cards stand out*/
+  background-color: grey;
+  /*background colour of the card*/
+  border-radius: 20px;
+  /*Rounding off the cards edges*/
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
+  /*adding a box shadow so the cards stand out*/
 }
 
 .card2 {
   background-color: lightpink;
+  /*alternating the fact card colours*/
   border-radius: 20px;
   box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
 }
@@ -98,8 +108,8 @@
 .container {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  /*I added clip path to the containers holding our cards for this cool diagonal overlay. I'm using a polygon so that I have 
-  four points to work with and cover the image.*/
+  /*I added clip path to the containers holding my cards for this cool diagonal overlay. I'm using a polygon so that I have 
+  four points to work with and cover part of the image.*/
 }
 
 .card-img {
@@ -113,28 +123,32 @@ details {
 }
 
 .details>h3 {
-  color: white; /*the grey cards have a white header so its readable*/
+  color: white;
+  /*the grey cards have a white header so its readable*/
   font-weight: 600;
   font-size: 18px;
   margin: 10px 0 15px 0;
 }
 
 .details>.black {
-  color: black; /*the pink cards have black text*/
+  color: black;
+  /*the pink cards have black text*/
   font-weight: 600;
   font-size: 18px;
   margin: 10px 0 15px 0;
 }
 
 .details>.info {
-  color: white; /*the grey cards have white text for the info*/
+  color: white;
+  /*the grey cards have white text for the info*/
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
 }
 
 .details>.info2 {
-  color: black; /*the pink cards have a black header*/
+  color: black;
+  /*the pink cards have a black header*/
 }
 
 
@@ -162,25 +176,49 @@ small {
   font-size: 16px;
 }
 
+/*making the Youtube video repsonsive*/
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 75px;
+}
+
 
 
 @media screen and (max-width: 600px) {
 
-  .menu {
+  .menu-v {
     display: block;
     /*this will stack our menu elements on top of each other*/
     position: absolute;
     z-index: 100;
     /*so that the menu appears in front of my image slider*/
     top: 90px;
+    left: 0;
+    width: 100%;
 
-  }
+    background-color: rgba(255, 255, 255, 0.9);
+    /* alpha takes care of the opacity which is 0.9 so there is some differentiation
+    between the menu and the web page.*/
+}
 
-  .menu>li {
+.menu-v>li {
     text-align: center;
     border-bottom: 1px solid #ccc;
+    /* Seperates our menu elements */
     padding: 50px 0px;
-  }
+    /* adjusting the size of the menu elements */
+}
 
   .hide {
     display: none;

@@ -1,10 +1,11 @@
-.header-c{
-    background:#ffd6d6; /*adding this gradient bg colour for the first section of the shop page*/
+.header-c {
+    background: #ffd6d6;
+    /*adding this gradient bg colour for the first section of the shop page*/
 }
 
 
-
-.btn-c { /*restyling some of my button elements for this page, particularly the menu*/
+.btn-c {
+    /*restyling some of my button elements for this page, particularly the food menu*/
     display: inline-block;
     background: #d49697;
     color: #fff;
@@ -19,19 +20,38 @@
 }
 
 
-.btn-c:hover{
-    background: #6b6869; /*adding a hover effect on the button and above is the transition time so that it is a smooth animation*/
+.btn-c:hover {
+    background: #6b6869;
+    /*adding a hover effect on the button and above is the transition time so that it is a smooth animation*/
 }
 
 .mobileNavBTN {
     font-size: 35px;
+    /* Making the nav button bigger and positioning it */
     padding: 5px;
     margin-left: 67px;
     background: transparent;
 }
 
+.menu-c {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
 
-.container-c{
+}
+
+.menu-c>li {
+    padding: 10px 20px;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+.container-c {
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
@@ -42,27 +62,35 @@
 
 /*Video background starts here*/
 
-.video{
+.video {
 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgba(0, 0, 0, 0.6); /*adjusting the opacity of the video*/
-    color: white;/*white text colour*/
+    background: rgba(0, 0, 0, 0.6);
+    /*adjusting the opacity of the video*/
+    color: white;
+    /*white text colour*/
     margin-bottom: 45px;
     position: relative;
-    overflow: hidden; /*the video will stay inside of our container with any overflow hidden*/
+    overflow: hidden;
+    /*the video will stay inside of our container with any overflow hidden*/
     min-height: 80vh;
+    /*vh means viewport height*/
 }
 
-.background{
+.background {
     position: absolute;
     z-index: -1;
-    top: 50%; /*These 2 values at 50% put the top left corner of the video dead center of the container*/
+    /*By making the z-index a negative value, it
+    brings the grey and 'catering services' text in front of the video so you can see it.*/
+    top: 50%;
+    /*These 2 values at 50% put the top left corner of the video dead center of the container*/
     left: 50%;
-    transform: translate(-50%, -50%); /*Dependant on screen size, the video will transform -50% on both the x and y axis so that 
-    our video is always playing from the center, rather than half of the video being cut out*/
+    transform: translate(-50%, -50%);
+    /*Dependant on screen size, the video will transform -50% on both the x and y axis so that 
+    my video is always playing from the center, rather than half of the video being cut out*/
     min-width: 100%;
     min-height: 100%;
 
@@ -71,43 +99,49 @@
 
 /*Testimomnials start here*/
 
-.testimonial-c{
+.testimonial-c {
     padding-top: 0px;
     margin-bottom: 45px;
     background: radial-gradient(#fff, #ffd6d6);
 }
 
-.testimonial-c .col-3{
+.testimonial-c .col-3 {
     text-align: center;
     padding: 40px 10px;
     background-color: #fff;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3); /*adding a box shadow so that the reviews stand out*/
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    /*adding a box shadow so that the reviews stand out*/
     cursor: pointer;
     transition: transform 0.5s;
 }
 
-.testimonial-c .col-3 img{ /*making the testimonial photos a small circular image*/
+.testimonial-c .col-3 img {
+    /*making the testimonial photos a small circular image*/
     width: 50px;
     margin-top: 20px;
     border-radius: 50%;
 }
 
-.testimonial-c .col-3:hover{
+.testimonial-c .col-3:hover {
     transform: translateY(-10px);
+    /*when the cursor hovers above one of the testimonials, move 10 pixels up the Y axis*/
 }
 
-.fa.fa-quote-left{ /*styling the quote symbol above the testimonials*/
+.fa.fa-quote-left {
+    /*styling the quote symbol above the testimonials*/
     font-size: 30px;
-    color:#b88081;
+    color: #b88081;
 }
 
-.col-3 p{ /*adjusting and styling the testimonials text*/
+.col-3 p {
+    /*adjusting and styling the testimonials text*/
     font-size: 14px;
     margin: 12px 0;
     color: grey;
 }
 
-.testimonial-c .col-3 h3{ /* styling the name of the testimonial person*/
+.testimonial-c .col-3 h3 {
+    /* styling the name of the testimonial person*/
     font-weight: 600;
     color: grey;
     font-size: 16px;
@@ -155,55 +189,63 @@ and making the line responsive.
 
 /*styling for menu starts here*/
 
-.food-menu{
+.food-menu {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /*3 items in a row, 1fr means the column will take up 1 fraction unit
+    grid-template-columns: repeat(3, 1fr);
+    /*3 items in a row, 1fr means the column will take up 1 fraction unit
     of the available space*/
-    padding: 30px 20px; /*padding in between each food item*/
+    padding: 30px 20px;
+    /*padding in between each food item*/
     grid-column-gap: 20px;
     grid-row-gap: 30px;
+    /*gaps between the each menu item*/
 }
 
-.food-items{
+.food-items {
     display: grid;
     position: relative;
     grid-template-rows: auto 1fr;
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     margin: 0 20px;
     transition: 0.2s ease;
 }
-.food-items img{
-   height: 300px;
+
+.food-items img {
+    height: 300px;
     width: 100%;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
-
-    
+    /*The image will fill the container while maintaining its aspect ratio*/
 }
 
-.food-items:hover{
+.food-items:hover {
     transform: scale(1.04);
 }
 
-.details{
+.details {
     padding: 20px 10px;
     display: grid;
+    /*displaying our content in a grid*/
     grid-template-rows: auto 1fr 50px;
     grid-row-gap: 15px;
 }
-.sub-details{
+
+.sub-details {
     display: grid;
     grid-template-columns: auto auto;
 }
-.sub-details>h5{
+
+.sub-details>h5 {
     font-weight: 600;
     font-size: 18px;
 }
-.price{
+
+.price {
     text-align: right;
 }
-.details>p{
+
+.details>p {
     color: #6f6f6f;
     font-size: 15px;
     line-height: 28px;
@@ -215,33 +257,31 @@ and making the line responsive.
 
 /*media query here to make this page responsive*/
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
 
-.food-menu{
-    grid-template-columns: repeat(2, 1fr); /*only show 2 items in a row for our menu if the screen size is less than 1000px*/
-}
-
-}
-
-
-@media screen and (max-width: 600px){
-
-    .food-menu{
-        grid-template-columns: repeat(1, 1fr); /*only show 1 item in a row for our menu if the screen size is less than 600px*/
+    .food-menu {
+        grid-template-columns: repeat(2, 1fr);
+        /*only show 2 items in a row for our menu if the screen size is less than 1000px*/
     }
 
-    .menu {
-        display: block;
-        /*this will stack our menu elements on top of each other*/
-        position: absolute;
-        z-index: 100; /*so that the menu appears in front of my image slider*/
-        top: 90px;
+}
 
+
+@media screen and (max-width: 600px) {
+
+    .food-menu {
+        grid-template-columns: repeat(1, 1fr);
+        /*only show 1 item in a row for our menu if the screen size is less than 600px*/
     }
 
     .hide {
         display: none;
     }
-    
 
+    .btn-c{
+        width: 320px;
+        padding: 30px 30px;
+        margin: 0;
     }
+
+}

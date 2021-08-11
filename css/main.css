@@ -1,6 +1,4 @@
 * {
-
-    /*In case a user does not have access to the fonts I import it will default to these*/
     margin: 0px;
     /* resetting the default values that the browser may have for margin, padding and border*/
     padding: 0px;
@@ -68,6 +66,7 @@ header {
 
 .header {
     background: radial-gradient(#fff, #ffd6d6);
+    /*adding a background to our header*/
 }
 
 .mobileNavBTN {
@@ -89,6 +88,7 @@ header {
 .menu>li {
     padding: 10px 20px;
 }
+
 
 .hide {
     display: none;
@@ -115,7 +115,7 @@ header {
     text-decoration: none;
 }
 
-
+/*styling my tagline*/
 #tagline {
     font-family: 'Raleway', sans-serif;
     text-decoration: underline solid #d39495;
@@ -128,6 +128,8 @@ header {
 }
 
 #section1 {
+    /*section 1 of our splitscreen5050. I'm specifying that we are using display flex and flex direction row
+    which is why our section 1 img and section 1 p (paragraphs) will position  in a row taking up 50% of the screen each*/
     width: 100%;
     height: auto;
     display: flex;
@@ -151,6 +153,7 @@ header {
     height: auto;
     display: flex;
     flex-direction: row-reverse;
+    /*using row reverse so that the picture and text swap places for a more interesting home page*/
     padding-top: 80px;
 }
 
@@ -166,9 +169,10 @@ header {
     font-size: 18px;
 }
 
-/*Image slider css starts here*/
+/*Image slider starts here*/
 #slider {
     overflow: hidden;
+    /*if any of my images overflow out of my slider container it will be hidden*/
 }
 
 #slider figure {
@@ -182,11 +186,14 @@ header {
 
 #slider figure img {
     width: 20%;
-    /* 100% divided by 5 images = 20% so we only see one image at a time without the overlap*/
+    /* 100% divided by 5 images = 20% so we only see one image at a time without them overlapping*/
     float: left;
 }
 
 @keyframes slider {
+
+    /*0% is the beginning of the animation, 100% is when the animation is complete. I'm using left because my slider images will 
+    slide left*/
     0% {
         left: 0;
     }
@@ -227,7 +234,7 @@ header {
 footer {
     width: 100%;
     background-color: #A97576;
-    font-family: 'Caveat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     height: 180px;
     margin-top: 90px;
     display: flex;
@@ -288,7 +295,6 @@ html {
     /*colour of the square holding the arrow*/
     bottom: 40px;
     right: 50px;
-
     text-decoration: none;
     text-align: center;
     line-height: 50px;
@@ -297,6 +303,23 @@ html {
     font-size: 22px;
 }
 
+
+/*Making the embedded YouTube video responsive*/
+.iframe-container-main {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-container-main iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 65px;
+}
 
 
 /* Media query for 900px and below */
@@ -320,9 +343,11 @@ html {
         height: auto;
         display: flex;
         flex-direction: column;
+        /*stacks the images and text rather than displaying them in a row*/
     }
 
     #section1>p {
+        /*Centering the text and adjusting the positioning for this screen size*/
         padding-top: 30px;
         padding-left: 20px;
         padding-right: 20px;
@@ -425,18 +450,8 @@ html {
         font-size: 50px;
     }
 
-}
-
-
-@media only screen and (max-width: 420px) {
-
     a {
         font-size: 22px;
-    }
-
-    footer {
-        height: auto;
-        padding-bottom: 25px;
     }
 
     .menu {
@@ -466,13 +481,8 @@ html {
         display: none;
     }
 
-    .socialMediaLinks>li>a>i {
-
-        font-size: 40px;
-    }
-
-    footer>span {
-        font-size: 20px;
+    .logo>h1{
+        margin-left: 20px;
     }
 
 }

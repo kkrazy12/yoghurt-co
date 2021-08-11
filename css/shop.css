@@ -5,23 +5,24 @@
     border: 0px;
 }
 
-body{
-    font-family: 'Raleway', sans-serif; 
+body {
+    font-family: 'Raleway', sans-serif;
 }
 
-.container-s{
+.container-s {
+    /*styling my header container*/
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
 
-.logo{
+.logo {
     margin-left: 50px;
-    
+
 }
 
-.row{
+.row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -31,27 +32,24 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
-.col-2{
-    flex-basis: 50%; /*I want the two columns to take up 50% of the space each*/
+.col-2 {
+    flex-basis: 50%;
+    /*I want the two columns to take up 50% of the space each*/
     min-width: 300px;
-    font-family: 'Raleway', sans-serif;
 }
 
-.col-2 img{
+.col-2 img {
     max-width: 100%;
     padding: 50px 0;
 }
 
-.col-2 h1{ /*selecting our first title and styling*/
-    font-family: 'Raleway', sans-serif;
+.col-2 h1 {
+    /*selecting our first title and styling*/
     font-size: 50px;
     line-height: 60px;
     margin: 18px 0;
 }
 
-.col-2 p{
-    font-family: 'Raleway', sans-serif;
-}
 
 .mobileNavBTN {
     font-size: 35px;
@@ -61,7 +59,7 @@ body{
     background: transparent;
 }
 
-.btn{
+.btn {
     display: inline-block;
     background: #d49697;
     color: #fff;
@@ -69,15 +67,17 @@ body{
     margin: 30px 0;
     border-radius: 30px;
     transition: background 0.5s;
+    /*transition for our hover effect*/
 }
 
-.btn:hover{
-    background: #6b6869; /*adding a hover effect on the button and above is the transition time so that it is a smooth animation*/
+.btn:hover {
+    background: #6b6869;
+    /*adding a hover effect on the button and above is the transition time so that it is a smooth animation*/
 }
 
 
 
-.menu {
+.menu-s {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -85,7 +85,7 @@ body{
 
 }
 
-.menu>li {
+.menu-s>li {
     padding: 10px 20px;
 }
 
@@ -93,26 +93,19 @@ body{
     display: none;
 }
 
-.btn{
-    display: inline-block;
-    background: #d49697;
-    color: #fff;
-    padding: 8px 30px;
-    margin: 30px 0;
-    border-radius: 30px;
-    transition: background 0.5s;
+.btn:hover {
+    background: #6b6869;
+    /*adding a hover effect on the button and above is the transition time so that it is a smooth animation*/
 }
 
-.btn:hover{
-    background: #6b6869; /*adding a hover effect on the button and above is the transition time so that it is a smooth animation*/
+.header {
+    background: radial-gradient(#fff, #ffd6d6);
+    /*adding this gradient bg colour for the first section of the shop page*/
 }
 
-.header{
-    background: radial-gradient(#fff,#ffd6d6); /*adding this gradient bg colour for the first section of the shop page*/
-}
-
-.header .row{
-    margin-top: 70px; /*adding margin to the top of our text so that it is in line with my image on the right side*/
+.header .row {
+    margin-top: 70px;
+    /*adding margin to the top of my text so that it is in line with my image on the right side*/
 }
 
 
@@ -120,26 +113,26 @@ body{
 
 /*catergories section*/
 
-.categories{
-    margin: 70px 0; /*adding some space between the top and bottom of the category images*/
+.categories {
+    margin: 70px 0;
+    /*adding some space between the top and bottom of the category images*/
 }
 
-.col-3{
-    flex-basis: 30%; /*each column will occupy 30% of the space*/
+.col-3 {
+    flex-basis: 30%;
+    /*each column will occupy 30% of the space*/
     min-width: 250px;
     margin-bottom: 30px;
     transition: transform 0.5s;
 }
 
-.col-3 img{
+.col-3 img {
     width: 100%;
 }
 
-.col-3 p{
-    font-family: 'Raleway', sans-serif;
-}
 
-.small-container-s{ /*Categories are in a small container so that I can make them smaller and space them nicely*/
+.small-container-s {
+    /*Categories are in a small container so that I can make them smaller and space them nicely*/
     max-width: 1080px;
     margin: auto;
     padding-top: 55px;
@@ -147,14 +140,15 @@ body{
     padding-left: 25px;
 }
 
-.col-3:hover{
-    transform: translateY(-10px); /*this is our hover animation so the image moves 5 pixels on the Y axis*/
+.col-3:hover {
+    transform: translateY(-10px);
+    /*this is our hover animation so the image moves 5 pixels on the Y axis*/
     cursor: pointer;
 }
 
 
 /* I originally wanted to code the underline like the below but I struggled with the psuedo command
-and making the line responsive. 
+and making the line responsive. Instead I used text-decoration with a solid underline, see below.
 
 .title::after{ /*this is styling for the small line underneath the title
     content: '';
@@ -168,59 +162,59 @@ and making the line responsive.
     transform: translateX(-50%); /*line will sit on the center from the x axis
 }*/
 
-.title{ 
-    text-align: center; /*aligning the categories title in the center and styling*/
+.title {
+    text-align: center;
+    /*aligning the categories title in the center and styling*/
     text-decoration: underline solid #d39495;
     text-decoration-thickness: 4px;
+    /*making my underline thicker*/
     margin: 0 auto 80px;
     position: relative;
     line-height: 60px;
     color: grey;
     font-size: 35px;
-    font-family: 'Raleway', sans-serif;
 }
 
 
 /*Customer favourites*/
 
-.row-favourites{
-display: flex;
-flex-basis: 25%;
+.row-favourites {
+    display: flex;
+    flex-basis: 25%;
 }
 
-.col-4{
-    flex-basis: 25%; /*Each column uses 25% as we have four columns*/
+.col-4 {
+    flex-basis: 25%;
+    /*Each column uses 25% as we have four columns*/
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
-    transition: transform 0.5s; /*this makes our transition smooth for our translate Y animation*/
+    transition: transform 0.5s;
+    /*this makes our transition smooth for our translate Y animation*/
 }
 
-.col-4 img{
-    width: 100%; 
-}
-
-.col-4 p{
-    font-family: 'Raleway', sans-serif;
+.col-4 img {
+    width: 100%;
 }
 
 
-h4{
+h4 {
     color: black;
     font-weight: normal;
-    font-family: 'Raleway', sans-serif;
 }
 
-.col-4 p{ /*adjusting the size and colour of our price tags*/
-font-size: 14px;
-color: grey;
+.col-4 p {
+    /*adjusting the size and colour of our price tags*/
+    font-size: 14px;
+    color: grey;
 }
 
-.rating .fas{
-    color: #b88081; /*changing the colour of our rating stars*/
+.rating .fas {
+    color: #b88081;
+    /*changing the colour of our rating stars*/
 }
 
-.col-4:hover{
+.col-4:hover {
     transform: translateY(-5px);
     cursor: pointer;
 }
@@ -229,125 +223,113 @@ color: grey;
 
 /*advertisement styling here*/
 
-.offer{ /*adding a gradient background to this small container so that the advert is different from the rest of the page*/
-background: radial-gradient(#fff, #ffd6d6);
-margin-top: 80px;
-padding: 30px 0;
+.offer {
+    /*adding a gradient background to this small container so that the advert is different from the rest of the page*/
+    background: radial-gradient(#fff, #ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;  
 }
 
-.col-2 .wedding-img{
-   padding:0px;
+.offer .col-2>h1 {
+    font-size: 35px;
+    line-height: 36px;
+    margin: 18px 0;
 }
 
-small{
+.col-2 .wedding-img {
+    padding: 0px;
+}
+
+small {
     color: grey;
-        font-family: 'Raleway', sans-serif;
-}
-
-.offer h1{
     font-family: 'Raleway', sans-serif;
 }
-
-.offer p{
-    font-family: 'Raleway', sans-serif;
-}
-
 
 
 
 /*Testimomnials start here*/
 
-.testimonial{
+.testimonial {
     padding-top: 100px;
 }
 
-.testimonial .col-3{
+.testimonial .col-3 {
     text-align: center;
     padding: 40px 10px;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3); /*allows the user to see the information more clearly against the white bg*/
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    /*allows the user to see the information more clearly against the white bg*/
     cursor: pointer;
     transition: transform 0.5s;
 }
 
-.testimonial .col-3 img{ /*making the testimonial photos a small circular image*/
+.testimonial .col-3 img {
+    /*making the testimonial photos a small circular image*/
     width: 50px;
     margin-top: 20px;
     border-radius: 50%;
+    /*curves the edges and 50% makes it a circle*/
 }
 
-.testimonial .col-3:hover{
+.testimonial .col-3:hover {
     transform: translateY(-10px);
 }
 
-.fa.fa-quote-left{ /*styling the quote symbol above the testimonials*/
+.fa.fa-quote-left {
+    /*styling the quote symbol above the testimonials*/
     font-size: 30px;
-    color:#b88081;
+    color: #b88081;
 }
 
-.col-3 p{ /*adjusting and styling the testimonials text*/
+.col-3 p {
+    /*adjusting and styling the testimonials text*/
     font-size: 14px;
     margin: 12px 0;
     color: grey;
 }
 
-.testimonial .col-3 h3{ /* styling the name of the testimonial person*/
+.testimonial .col-3 h3 {
+    /* styling the name of the testimonial person*/
     font-weight: 600;
     color: grey;
     font-size: 16px;
 }
 
 
-@media only screen and (max-width: 900px){
-    .row-favourites{
+@media only screen and (max-width: 900px) {
+    .row-favourites {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-around;
         text-align: center;
-        font-family: 'Raleway', sans-serif;
-        }
+    }
 }
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
 
-    .row{
+    .row {
         text-align: center;
-        flex-direction: column; 
+        flex-direction: column;
+        /*stack on top of one another for this screen size*/
     }
 
 
-    .col-2, .col-3, .col-4{
+    .col-2,
+    .col-3,
+    .col-4 {
         flex-basis: 100%;
     }
 
-    .menu {
-        display: block;
-        /*this will stack our menu elements on top of each other*/
-        position: absolute;
-        z-index: 100; /*so that the menu appears in front of my image slider*/
-        top: 90px;
-        left: 0;
-        width: 100%;
-        
-        background-color: rgba(255, 255, 255, 0.9);
-        /* alpha takes care of the opacity which is 0.9 so there is some differentiation
-        between the menu and the web page.*/
-    }
-    
-    .menu>li {
-        text-align: center;
-        border-bottom: 1px solid #ccc;
-        /* Seperates our menu elements */
-        padding: 50px 0px;
-        /* adjusting the size of the menu elements */
-    }
-    
+.menu>li{
+    font-size: 20px;
+}
+
     .hide {
         display: none;
     }
 
-    .row img{
+    .row img {
         width: 400px;
     }
 
@@ -355,17 +337,26 @@ small{
         width: 400px;
     }
 
-    .logo{
+    .logo {
         margin-left: -10px;
         margin-right: 160px;
     }
 
-    .container-s{
+    .container-s {
         width: auto;
     }
 
-.testimonial{
-    padding-top: 20px;
-}
+    .testimonial {
+        padding-top: 20px;
+    }
+
+    .btn{
+        padding: 30px 80px;
+        font-size: 20px;
+    }
+
+    footer>span {
+        font-size: 28px;
+    }
 
 }
